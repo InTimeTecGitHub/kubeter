@@ -22,11 +22,12 @@ export class ReplicaSet extends Resource {
     }
     
     addPods() {
-        let containers = prompt("How many pods?", "0");
+        // let containers = prompt("How many pods?", "0");
+        let containers = 2;
         if (containers != null && Number(containers) != 0) {
             this.containers = Number(containers);
             for (let it = 0; it < Number(containers); it++) {
-                Konva.Image.fromURL("./assets/pod.svg", (darthNode: Konva.Image) => {
+                Konva.Image.fromURL("./main_window/assets/pod.svg", (darthNode: Konva.Image) => {
                     darthNode.setAttrs({
                         x: 55 * it,
                         y: 30,
