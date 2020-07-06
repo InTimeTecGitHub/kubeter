@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kubeter</title>
+</head>
+
+<body>
+  <p>
+    Drag and drop resources into the grey area.
+  </p>
+  <div id="drag-items">
+    <!-- TODO: This will fail when build for prod. -->
+    <img src="main_window/assets/pod.svg" draggable="true" />
+    <img src="main_window/assets/deploy.svg" draggable="true" />
+    <img src="main_window/assets/ns.svg" draggable="true" />
+    <img src="main_window/assets/rs.svg" draggable="true" />
+    <img src="main_window/assets/svc.svg" draggable="true" />
+    <img src="main_window/assets/cm.svg" draggable="true" />
+    <img src="main_window/assets/secret.svg" draggable="true" />
+    <img src="main_window/assets/ing.svg" draggable="true" />
+    <img src="main_window/assets/trash-can.png" draggable="false" style="position: absolute;right: 10px;" />
+  </div>
+  <div id="container"></div>
+</body>
+
+</html>
