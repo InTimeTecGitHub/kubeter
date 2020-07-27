@@ -1,27 +1,25 @@
 import Konva from "konva";
 import { Node } from "./Node";
+import { Resource } from "./Resource";
+import { SymImage } from "./SymImage";
 
-export class ConfigMap extends Node {
+export class ConfigMap extends Resource {
 
-	delegate: Konva.Image;
-	private group: Konva.Group;
+	// delegate: Konva.Image;
+	// private group: Konva.Group;
 	private configuration: Object;
-	constructor(image: Konva.Image) {
-		super();
-		image.setAttrs({
-			x: 100,
-			y: 80,
-			scaleX: 0.8,
-			scaleY: 0.8,
-		});
-		this.group = new Konva.Group({ draggable: true });
-		this.delegate = image;
-		this.group.add(this.delegate);
+	constructor(image: SymImage) {
+		super({}, image);
+		// image.setAttrs({
+		// 	x: 100,
+		// 	y: 80,
+		// 	scaleX: 0.8,
+		// 	scaleY: 0.8,
+		// });
+		// this.group = ;
+		// this.delegate = image;
+		// this.delegate.add(image);
 		this.configuration = {};
-	}
-
-	get Group() {
-		return this.group;
 	}
 
 	storeConfig = () => {
