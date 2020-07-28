@@ -1,16 +1,17 @@
 import Konva from "konva";
-import {Node} from "./Node";
-import {DomEvent} from "./enums/DomEvent";
+import { Resource } from "./Resource";
+import { SymImage } from "../SymImage";
+import { Kubeter } from "../Kubeter";
 
-export class Secret extends Node {
+export class Secret extends Resource {
 
-    delegate: Konva.Image;
+    // delegate: Konva.Image;
     private group: Konva.Group;
     private secretData: Object;
-    constructor(image: Konva.Image) {
-        super();
-        this.group = new Konva.Group();
-        this.delegate = image;
+    constructor(image: SymImage) {
+        super({}, image);
+        this.group = new Kubeter.Instance.Group();
+        // this.delegate = image;
         this.group.add(this.delegate);
         this.secretData = {};
     }

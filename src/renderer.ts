@@ -27,12 +27,12 @@
  */
 
 import './index.css';
-import { Cluster } from './shapes/Cluster';
+import { Cluster } from './shapes/k8s/Cluster';
 
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
 
 new Cluster({
     container: 'container',
-    width: 1000,
+    width: window.innerWidth,
     height: window.innerHeight,
 });
