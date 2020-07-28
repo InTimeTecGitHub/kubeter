@@ -1,17 +1,88 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin: auto;
-  /* max-width: 38rem; */
-  padding: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
 }
-#container {
-  background-color: rgba(0, 0, 0, 0.1);
+
+#k8scanvas {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 p {
-  margin: 4px;
+    margin: 4px;
 }
 
-#drag-items img {
-  height: 60px;
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the header */
+
+.header {
+    background-color: #f1f1f1;
+    padding: 1px;
+    text-align: center;
+}
+
+
+/* Style the top navigation bar */
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+/* Style the topnav links */
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+}
+
+
+/* Change color on hover */
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Create three equal columns that floats next to each other */
+
+.column {
+    float: left;
+    /* padding: 15px; */
+}
+
+.column.main {
+    width: 75%;
+}
+
+.column.side {
+    width: 25%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width:600px) {
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
 }

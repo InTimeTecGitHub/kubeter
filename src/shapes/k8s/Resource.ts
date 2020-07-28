@@ -18,7 +18,7 @@ export class Resource extends Node<Konva.Group> {
     }
 
     private events = new Map<DomEvent, Observable<KonvaEventObject<DomEvent>>>();
-    private image: SymImage;
+    protected image: SymImage;
 
     constructor(config: Konva.ContainerConfig, image?: SymImage) {
         super(new Kubeter.Instance.Group(config));

@@ -2,27 +2,38 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Kubeter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubeter</title>
 </head>
 
 <body>
-  <p>
-    Drag and drop resources into the grey area.
-  </p>
-  <div id="drag-items">
-    <!-- TODO: This will fail when build for prod. -->
-    <img src="main_window/assets/pod.svg" draggable="true" />
-    <img src="main_window/assets/deploy.svg" draggable="true" />
-    <img src="main_window/assets/ns.svg" draggable="true" />
-    <img src="main_window/assets/rs.svg" draggable="true" />
-    <img src="main_window/assets/svc.svg" draggable="true" />
-    <img src="main_window/assets/cm.svg" draggable="true" />
-    <img src="main_window/assets/secret.svg" draggable="true" />
-    <img src="main_window/assets/ing.svg" draggable="true" />
-    <img src="main_window/assets/trash-can.png" draggable="false" style="position: absolute;right: 10px;" />
-  </div>
-  <div id="container"></div>
+    <div class="header">
+        <p> Drag and drop resources into the grey area.</p>
+    </div>
+    <div id="drag-items" class="topnav">
+        <!-- TODO: This will fail when build for prod. -->
+        <a href="#"><img src="main_window/assets/pod.svg" draggable="true" /></a>
+        <a href="#"><img src="main_window/assets/deploy.svg" draggable="true" /></a>
+        <a href="#"><img src="main_window/assets/ns.svg" draggable="true" /></a>
+        <a href="#"><img src="main_window/assets/rs.svg" draggable="true" /></a>
+        <a href="#"><img src="main_window/assets/svc.svg" draggable="true" /></a>
+        <a href="#"><img src="main_window/assets/cm.svg" draggable="true" /></a>
+        <a href="#"><img src="main_window/assets/secret.svg" draggable="true" /></a>
+        <a href="#"><img src="main_window/assets/ing.svg" draggable="true" /></a>
+        <!-- <a href="#"></a><img src="main_window/assets/trash-can.png" draggable="false" style="position: absolute;right: 10px;" /> -->
+    </div>
+    <div class="row">
+        <div id="k8scanvas" class="column main">
+
+        </div>
+        <div id="git" class="column side">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+
+    </div>
 </body>
 
 </html>
