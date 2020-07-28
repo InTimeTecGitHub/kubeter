@@ -29,7 +29,6 @@ export abstract class Node<T extends NodeDelegate = NodeDelegate> {
         this.delegate.zIndex(z);
     }
 
-
     get Center(): Position {
         return new Position(
             this.X + this.Width * 0.5,
@@ -108,6 +107,7 @@ export abstract class Node<T extends NodeDelegate = NodeDelegate> {
     show = () => this.delegate.show();
     add: (...el: Node[]) => NodeDelegate[] = (...el: Node[]) =>
         el.map(e => (<Konva.Group>this.delegate).add(e.delegate));
+
     destroy = () => {
         this.delegate.remove();
         this.delegate.destroy();

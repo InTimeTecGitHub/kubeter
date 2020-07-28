@@ -1,8 +1,7 @@
 import Konva from "konva";
-import {Node} from "./Node";
-import {DomEvent} from "./enums/DomEvent";
 import { Resource } from "./Resource";
-import { SymImage } from "./SymImage";
+import { SymImage } from "../SymImage";
+import { Kubeter } from "../Kubeter";
 
 export class Secret extends Resource {
 
@@ -11,7 +10,7 @@ export class Secret extends Resource {
     private secretData: Object;
     constructor(image: SymImage) {
         super({}, image);
-        this.group = new Konva.Group();
+        this.group = new Kubeter.Instance.Group();
         // this.delegate = image;
         this.group.add(this.delegate);
         this.secretData = {};

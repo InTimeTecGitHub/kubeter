@@ -1,9 +1,9 @@
 import Konva from "konva";
-import { DomEvent } from "./enums/DomEvent";
+import { DomEvent } from "../enums/DomEvent";
 import { Resource } from "./Resource";
 import { Pod } from "./Pod";
-import { Position } from "./Position";
-import { SymImage } from "./SymImage";
+import { Position } from "../Position";
+import { SymImage } from "../SymImage";
 
 export class ReplicaSet extends Resource {
 

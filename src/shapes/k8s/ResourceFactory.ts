@@ -1,6 +1,6 @@
 import { Resource } from "./Resource";
 import { Namespace } from "./Namespace";
-import { SymImage } from "./SymImage";
+import { SymImage } from "../SymImage";
 import { Pod } from "./Pod";
 import { ReplicaSet } from "./ReplicaSet";
 

@@ -1,12 +1,10 @@
 import Konva from "konva";
-import { DomEvent } from "./enums/DomEvent";
 import { Resource } from "./Resource";
-import { SymImage } from "./SymImage";
+import { SymImage } from "../SymImage";
 
-export class Pod extends Resource {
+export class Namespace extends Resource {
 
     constructor(rectConfig: Konva.RectConfig, image: SymImage) {
         super(rectConfig, image);
     }
-
 }

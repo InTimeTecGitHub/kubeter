@@ -1,13 +1,15 @@
 import { Resource } from "./Resource";
 import Konva from "konva";
-import { StageConfig } from "konva/types/Stage";
-import { DomEvent } from "./enums/DomEvent";
-import { Node } from "./Node";
+//TODO: Karma will not be able to resolve path if path is "konva/types/Stage. Investigation required."
+import { StageConfig } from "../../../node_modules/konva/types/Stage";
+import { DomEvent } from "../enums/DomEvent";
+import { Node } from "../Node";
 import { Observable, fromEvent } from "rxjs";
 import { tap } from "rxjs/operators";
-import { KonvaEventObject } from "konva/types/Node";
-import { SymImage } from "./SymImage";
+import { KonvaEventObject } from "../../../node_modules/konva/types/Node";
+import { SymImage } from "../SymImage";
 import { ResourceFactory } from "./ResourceFactory";
+import { Kubeter } from "../Kubeter";
 
 export class Cluster extends Node<Konva.Stage> {
     private readonly layer: Konva.Layer;
@@ -16,9 +18,13 @@ export class Cluster extends Node<Konva.Stage> {
     private resources: Resource[] = [];
     private drop$: Observable<Event>;
 
+    get Group() {
+        return this.delegate;
+    }
+    
     constructor(config: StageConfig) {
-        super(new Konva.Stage(config))
-        this.layer = new Konva.Layer();
+        super(new Kubeter.Instance.Stage(config))
+        this.layer = new Kubeter.Instance.Layer();
         this.delegate.add(this.layer);
         var con = this.delegate.container();
         con.addEventListener(DomEvent.DRAG_OVER, e => e.preventDefault());
@@ -30,7 +36,6 @@ export class Cluster extends Node<Konva.Stage> {
             this.delegate.setPointersPositions(e);
         }));
 
-        //TODO: This should be moved out.
         this.drop$.subscribe(async (e) => {
             let pos = this.delegate.getPointerPosition()
             let img = new SymImage({
@@ -40,6 +45,7 @@ export class Cluster extends Node<Konva.Stage> {
             });
             await img.load(this.dragTarget);
             let resource = ResourceFactory.get(this.DragTargetName, img);
+            this.resources.push(resource);
             this.layer.add(resource.Group);
             this.layer.batchDraw();
         });

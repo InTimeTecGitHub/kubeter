@@ -1,9 +1,10 @@
 import Konva from "konva";
 import { Node } from "./Node";
 import { Observable, Subject } from "rxjs";
-import { KonvaEventObject } from "konva/types/Node";
+import { KonvaEventObject } from "../../node_modules/konva/types/Node";
 import { refCount, multicast } from "rxjs/operators";
 import { DomEvent } from "./enums/DomEvent";
+import { Kubeter } from "./Kubeter";
 
 export class SymImage extends Node<Konva.Group> {
 
@@ -11,8 +12,8 @@ export class SymImage extends Node<Konva.Group> {
     private readonly image: Konva.Image;
 
     constructor(config?: Konva.ImageConfig) {
-        super(new Konva.Group(config));
-        this.image = new Konva.Image(config);
+        super(new Kubeter.Instance.Group(config));
+        this.image = new Kubeter.Instance.Image(config);
         this.delegate.add(this.image)
     }
 

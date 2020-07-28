@@ -1,7 +1,7 @@
 import Konva from "konva";
-import { Node } from "./Node";
+import { Node } from "../Node";
 import { Resource } from "./Resource";
-import { SymImage } from "./SymImage";
+import { SymImage } from "../SymImage";
 
 export class ConfigMap extends Resource {
 
