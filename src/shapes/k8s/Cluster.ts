@@ -45,7 +45,7 @@ export class Cluster extends Node<Konva.Stage> {
             this.delegate.setPointersPositions(e);
         }));
 
-        window.onresize = () => this.resize(config.height, config.width)
+        // window.onresize = () => this.resize(config.height, config.width)
 
         this.drop$.subscribe(async () => {
             let pos = this.Pointer;

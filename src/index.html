@@ -8,32 +8,52 @@
 </head>
 
 <body>
-    <div class="header">
+    <header class="header">
         <p> Drag and drop resources into the grey area.</p>
-    </div>
-    <div id="drag-items" class="topnav">
-        <!-- TODO: This will fail when build for prod. -->
-        <a href="#"><img src="main_window/assets/pod.svg" draggable="true" /></a>
-        <a href="#"><img src="main_window/assets/deploy.svg" draggable="true" /></a>
-        <a href="#"><img src="main_window/assets/ns.svg" draggable="true" /></a>
-        <a href="#"><img src="main_window/assets/rs.svg" draggable="true" /></a>
-        <a href="#"><img src="main_window/assets/svc.svg" draggable="true" /></a>
-        <a href="#"><img src="main_window/assets/cm.svg" draggable="true" /></a>
-        <a href="#"><img src="main_window/assets/secret.svg" draggable="true" /></a>
-        <a href="#"><img src="main_window/assets/ing.svg" draggable="true" /></a>
-        <!-- <a href="#"></a><img src="main_window/assets/trash-can.png" draggable="false" style="position: absolute;right: 10px;" /> -->
-    </div>
-    <div class="row">
-        <div id="k8scanvas" class="column main">
-
+    </header>
+    <main>
+        <nav id="drag-items" class="topnav">
+            <!-- TODO: This will fail when build for prod. -->
+            <a href="#"><img src="main_window/assets/pod.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/deploy.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/ns.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/rs.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/svc.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/cm.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/secret.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/ing.svg" draggable="true" /></a>
+            <!-- <a href="#"></a><img src="main_window/assets/trash-can.png" draggable="false" style="position: absolute;right: 10px;" /> -->
+        </nav>
+        <div class="main-container row">
+            <aside class="settings-bar column">
+                <a href="#" class="row icon"><i class="fa fa-cog fa-2x"></i></a>
+                <a href="#" class="row icon"><i class="fa fa-cogs fa-2x"></i></a>
+                <a href="#" class="row icon"><i class="fa fa-address-book fa-2x"></i></a>
+                <a href="#" class="row icon"><i class="fa fa-allergies fa-2x"></i></a>
+                <a href="#" class="row icon"><i class="fa fa-ankh fa-2x"></i></a>
+                <a href="#" class="row icon"><i class="fa fa-anchor fa-2x"></i></a>
+            </aside>
+            <section class="workspace column">
+                <div class="row">
+                    <section class="settings-expand-bar six columns">
+                        <h2>What is Lorem Ipsum?</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        
+                    </section>
+                    <section class="canvas six columns">
+                        <div id="k8scanvas">
+                
+                        </div>
+                    </section>
+                </div>
+            </section>
         </div>
-        <div id="git" class="column side">
-            <h2>Column</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros,
-                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-        </div>
-
-    </div>
+    </main>
 </body>
 
 </html>

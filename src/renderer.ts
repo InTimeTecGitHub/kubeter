@@ -26,7 +26,9 @@
  * ```
  */
 
-import './index.css';
+import './sass/styles.scss';
+import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
 import { Cluster } from './shapes/k8s/Cluster';
 import { K8sCanvasID } from './constants';
 
