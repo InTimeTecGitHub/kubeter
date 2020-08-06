@@ -7,93 +7,53 @@ body {
     margin: 0;
     font-size: 16px;
     main {
+        height: 100vh;
         header {
             background-color: #f1f1f1;
             padding: 1px;
             text-align: center;
         }
-        section {
-            &.main-container {
-                height: 100vh;
-                width: 100vw;
-            }
-            &.workspace {
-                width: 95vw;
-            }
-            &.canvas {
-                background: #494747;
-                resize: both;
-                overflow: auto;
-            }
-            &.settings-expand-bar {
-                background: #1d1c1c;
-                color: #ffffff;
-                resize: both;
-                overflow: auto;
-            }
+        div {
+          &.main-container {
+              height: -webkit-fill-available;
+              display: table;
+              .row {
+                  display: table-row;
+              }
+          }
         }
-        aside {
-            height: 100vh;
-            padding: 1rem;
-            background: #444242;
-            &.settings-bar {
-                width: 5vw;
-            }
-            a {
-                i {
-                    padding-bottom: 1rem;
-                    color: white;
+        section {
+            &.workspace {
+                display: table-cell;
+                .settings-expand-bar {
+                    background: #1d1c1c;
+                    color: #ffffff;
+                    resize: both;
+                    width: 50%;
+                    float: left;
+                }
+                .canvas {
+                    background: #494747;
+                    resize: both;
+                    width: 50%;
+                    float: right;
                 }
             }
         }
-    }
-    .container:after,
-    .row:after,
-    .u-cf {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    .column,
-    .columns {
-        float: left;
-        box-sizing: border-box;
-        margin: 0;
-        &.one {
-            width: 8.34%;
-        }
-        &.two {
-            width: 16.67%;
-        }
-        &.three {
-            width: 25%;
-        }
-        &.four {
-            width: 33.33%;
-        }
-        &.five {
-            width: 41.67%
-        }
-        &.six {
-            width: 50%;
-        }
-        &.seven {
-            width: 58.33%;
-        }
-        &.eight {
-            width: 66.67%;
-        }
-        &.nine {
-            width: 75.19%;
-        }
-        &.ten {
-            width: 83.33%;
-        }
-        &.eleven {
-            width: 91.74%;
-        }
-        &.twelve {
-            width: 100%;
+        aside {
+            background: #444242;
+            display: table-cell;
+            padding: 0;
+            margin: 0;
+            vertical-align: top;
+            &.settings-bar {
+                a {
+                    i {
+                        padding: 15px;
+                        color: white;
+                    }
+                }
+            }
         }
     }
 }
