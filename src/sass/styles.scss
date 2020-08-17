@@ -1,0 +1,60 @@
+/*
+ * Import skeleton.
+ */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-size: 16px;
+    main {
+        height: 100vh;
+        header {
+            background-color: #f1f1f1;
+            padding: 1px;
+            text-align: center;
+        }
+        div {
+          &.main-container {
+              height: -webkit-fill-available;
+              display: table;
+              .row {
+                  display: table-row;
+              }
+          }
+        }
+        section {
+            &.workspace {
+                display: table-cell;
+                .settings-expand-bar {
+                    background: #1d1c1c;
+                    color: #ffffff;
+                    resize: both;
+                    width: 50%;
+                    float: left;
+                }
+                .canvas {
+                    background: #494747;
+                    resize: both;
+                    width: 50%;
+                    float: right;
+                }
+            }
+        }
+        aside {
+            background: #444242;
+            display: table-cell;
+            padding: 0;
+            margin: 0;
+            vertical-align: top;
+            &.settings-bar {
+                a {
+                    i {
+                        padding: 15px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+

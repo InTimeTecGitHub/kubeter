@@ -26,13 +26,15 @@
  * ```
  */
 
-import './index.css';
+import './sass/styles.scss';
+import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
 import { Cluster } from './shapes/k8s/Cluster';
+import { K8sCanvasID } from './constants';
 
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
-
 new Cluster({
-    container: 'container',
+    container: K8sCanvasID,
     width: window.innerWidth,
     height: window.innerHeight,
 });

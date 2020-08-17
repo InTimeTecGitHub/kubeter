@@ -2,27 +2,58 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Kubeter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubeter</title>
 </head>
 
 <body>
-  <p>
-    Drag and drop resources into the grey area.
-  </p>
-  <div id="drag-items">
-    <!-- TODO: This will fail when build for prod. -->
-    <img src="main_window/assets/pod.svg" draggable="true" />
-    <img src="main_window/assets/deploy.svg" draggable="true" />
-    <img src="main_window/assets/ns.svg" draggable="true" />
-    <img src="main_window/assets/rs.svg" draggable="true" />
-    <img src="main_window/assets/svc.svg" draggable="true" />
-    <img src="main_window/assets/cm.svg" draggable="true" />
-    <img src="main_window/assets/secret.svg" draggable="true" />
-    <img src="main_window/assets/ing.svg" draggable="true" />
-    <img src="main_window/assets/trash-can.png" draggable="false" style="position: absolute;right: 10px;" />
-  </div>
-  <div id="container"></div>
+    <header class="header">
+        <p> Drag and drop resources into the grey area.</p>
+    </header>
+    <main>
+        <nav id="drag-items" class="topnav">
+            <!-- TODO: This will fail when build for prod. -->
+            <a href="#"><img src="main_window/assets/pod.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/deploy.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/ns.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/rs.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/svc.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/cm.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/secret.svg" draggable="true" /></a>
+            <a href="#"><img src="main_window/assets/ing.svg" draggable="true" /></a>
+            <!-- <a href="#"></a><img src="main_window/assets/trash-can.png" draggable="false" style="position: absolute;right: 10px;" /> -->
+        </nav>
+        <div class="main-container">
+            <div class="row">
+                <aside class="settings-bar">
+                    <a href="#" class="row icon"><i class="fa fa-cog fa-2x"></i></a>
+                    <a href="#" class="row icon"><i class="fa fa-cogs fa-2x"></i></a>
+                    <a href="#" class="row icon"><i class="fa fa-address-book fa-2x"></i></a>
+                    <a href="#" class="row icon"><i class="fa fa-allergies fa-2x"></i></a>
+                    <a href="#" class="row icon"><i class="fa fa-ankh fa-2x"></i></a>
+                    <a href="#" class="row icon"><i class="fa fa-anchor fa-2x"></i></a>
+                </aside>
+                <section class="workspace">
+                    <section class="settings-expand-bar">
+                        <h2>What is Lorem Ipsum?</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        
+                    </section>
+                    <section class="canvas">
+                        <div id="k8scanvas">
+                
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
