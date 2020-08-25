@@ -11,7 +11,7 @@ import { ResourceFactory } from "./ResourceFactory";
 import { Kubeter } from "../Kubeter";
 import { K8sCanvasID } from "../../constants";
 
-export class Cluster extends Node<Konva.Stage> {
+export class Canvas extends Node<Konva.Stage> {
     private readonly layer: Konva.Layer;
     private dragTarget: string;
     private resources: Resource[] = [];
