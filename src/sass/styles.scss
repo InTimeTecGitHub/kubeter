@@ -6,8 +6,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     font-size: 16px;
+    height: 100vh;
     main {
-        height: 100vh;
         header {
             background-color: #f1f1f1;
             padding: 1px;
@@ -16,41 +16,108 @@ body {
         div {
           &.main-container {
               height: -webkit-fill-available;
-              display: table;
-              .row {
-                  display: table-row;
-              }
+              display: flex;
+              flex-wrap: nowrap;
           }
-        }
-        section {
-            &.workspace {
-                display: table-cell;
-                .settings-expand-bar {
-                    background: #1d1c1c;
-                    color: #ffffff;
-                    resize: both;
-                    width: 50%;
-                    float: left;
-                }
-                .canvas {
-                    background: #494747;
-                    resize: both;
-                    width: 50%;
-                    float: right;
-                }
-            }
         }
         aside {
             background: #444242;
-            display: table-cell;
             padding: 0;
             margin: 0;
             vertical-align: top;
+            flex-shrink: 3;
+            display: flex;
+            flex-direction: column;
             &.settings-bar {
                 a {
+                    &.highlight {
+                        background: #4442C1;
+                    }
                     i {
                         padding: 15px;
                         color: white;
+                    }
+                }
+            }
+        }
+        section {
+            &.workspace {
+                display: flex;
+                flex-wrap: nowrap;
+                width: 100%;
+                .settings-expand-bar {
+                    background: #1d1c1c;
+                    color: #1f0e0e;
+                    flex-grow: 1;
+                    max-width: 50%;
+                    position: relative;
+                    /* TODO: Rename this when changing the id in html. */
+                    #editor {
+                        min-width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        background: #e7e7e7 !important;
+                        overflow: auto;
+                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
+                        transition: all 0.5s ease-in-out;
+                    }
+                    /* TODO: Rename this when changing the id in html. */
+                    #two {
+                        height: 100%;
+                        position: absolute;
+                        background: #f35e5e !important;
+                        overflow: auto;
+                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
+                        transition: all 0.5s ease-in-out;
+                        z-index: 10;
+                    }
+                    /* TODO: Rename this when changing the id in html. */
+                    #three {
+                        height: 100%;
+                        position: absolute;
+                        background: #f5e946 !important;
+                        overflow: auto;
+                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
+                        transition: all 0.5s ease-in-out;
+                    }
+                    /* TODO: Rename this when changing the id in html. */
+                    #four {
+                        height: 100%;
+                        position: absolute;
+                        background: #4dfd5c !important;
+                        overflow: auto;
+                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
+                        transition: all 0.5s ease-in-out;
+                    }
+                    /* TODO: Rename this when changing the id in html. */
+                    #five {
+                        height: 100%;
+                        position: absolute;
+                        background: #4fb0ff !important;
+                        overflow: auto;
+                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
+                        transition: all 0.5s ease-in-out;
+                    }
+                    /* TODO: Rename this when changing the id in html. */
+                    #six {
+                        height: 100%;
+                        position: absolute;
+                        background: #eb3bbf !important;
+                        overflow: auto;
+                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+                .canvas {
+                    background: #494747;
+                    flex-grow: 2;
+                    #k8scanvas {
+                        height: 100%;
+                        position: relative;
+                        background: #6aa6aa !important;
+                        overflow: auto;
+                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+                        transition: all 0.5s ease-in-out;
                     }
                 }
             }

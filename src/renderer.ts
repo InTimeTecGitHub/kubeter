@@ -27,14 +27,26 @@
  */
 
 import './sass/styles.scss';
-import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+import '../node_modules/jquery/dist/jquery.min.js';
 
 import { Canvas } from './shapes/k8s/Canvas';
 import { K8sCanvasID } from './constants';
 
+let $ = require('jquery');
+
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
-new Canvas({
-    container: K8sCanvasID,
-    width: window.innerWidth,
-    height: window.innerHeight,
+// new Canvas({
+//     container: K8sCanvasID,
+//     width: window.innerWidth,
+//     height: window.innerHeight,
+// });
+
+
+$('aside a.setting-item').on('click', function () {
+    let id = $(this).attr('href');
+    $('.settings-expand-bar .item').css('z-index', '');
+    $('.settings-bar a.setting-item').removeClass('highlight');
+    $(this).addClass('highlight');
+    $(id).css('z-index', '999');
 });
