@@ -51,66 +51,45 @@ body {
                     flex-grow: 1;
                     max-width: 50%;
                     position: relative;
-                    /* TODO: Rename this when changing the id in html. */
-                    #editor {
+                    .item {
                         min-width: 100%;
                         height: 100%;
                         position: absolute;
-                        background: #e7e7e7 !important;
                         overflow: auto;
                         box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
                         transition: all 0.5s ease-in-out;
+                        width: 100%;
+                    }
+                    /* TODO: Rename this when changing the id in html. */
+                    #editor {
+                        background: #e7e7e7;
                     }
                     /* TODO: Rename this when changing the id in html. */
                     #two {
-                        height: 100%;
-                        position: absolute;
-                        background: #f35e5e !important;
-                        overflow: auto;
-                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
-                        transition: all 0.5s ease-in-out;
+                        background: #f35e5e;
                         z-index: 10;
                     }
                     /* TODO: Rename this when changing the id in html. */
                     #three {
-                        height: 100%;
-                        position: absolute;
-                        background: #f5e946 !important;
-                        overflow: auto;
-                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
-                        transition: all 0.5s ease-in-out;
+                        background: #f5e946;
                     }
                     /* TODO: Rename this when changing the id in html. */
                     #four {
-                        height: 100%;
-                        position: absolute;
-                        background: #4dfd5c !important;
-                        overflow: auto;
-                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
-                        transition: all 0.5s ease-in-out;
+                        background: #4dfd5c;
                     }
                     /* TODO: Rename this when changing the id in html. */
                     #five {
-                        height: 100%;
-                        position: absolute;
-                        background: #4fb0ff !important;
-                        overflow: auto;
-                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
-                        transition: all 0.5s ease-in-out;
+                        background: #4fb0ff;
                     }
                     /* TODO: Rename this when changing the id in html. */
                     #six {
-                        height: 100%;
-                        position: absolute;
-                        background: #eb3bbf !important;
-                        overflow: auto;
-                        box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
-                        transition: all 0.5s ease-in-out;
+                        background: #eb3bbf;
                     }
                 }
                 .canvas {
                     background: #494747;
                     flex-grow: 2;
+                    max-width: 50%;
                     #k8scanvas {
                         height: 100%;
                         position: relative;
@@ -118,6 +97,41 @@ body {
                         overflow: auto;
                         box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
                         transition: all 0.5s ease-in-out;
+                        nav {
+                            &#tabHeader {
+                                height: 28px;
+                                display: flex;
+                                align-items: center;
+                                div {
+                                    text-decoration: none;
+                                    color: white;
+                                    &.tab-item,
+                                    &.new-tab-item {
+                                        padding: 5px;
+                                        cursor: pointer;
+                                    }
+                                    &.active {
+                                        background-color: #505050;
+                                    }
+                                    a.close {
+                                        z-index: 999;
+                                        padding-top: 10px;
+                                        padding-bottom: 10px;
+                                        padding-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                        .tab {
+                            position: absolute;
+                            width: 100%;
+                            background-color: #505050;
+                            min-height: 100%;
+                            padding: 10px;
+                            &.active {
+                                z-index: 999 !important;
+                            }
+                        }
                     }
                 }
             }
