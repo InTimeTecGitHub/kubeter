@@ -103,6 +103,7 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.5.1",
     "konva": "^7.0.2"
   }
 }
