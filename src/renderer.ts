@@ -32,6 +32,7 @@ import '../node_modules/jquery/dist/jquery.min.js';
 
 import { Canvas } from './shapes/k8s/Canvas';
 import { K8sCanvasID } from './constants';
+import { gitFetch, gitPull } from '../src/gitIntegration/gitOperations';
 
 let $ = require('jquery');
 
@@ -62,6 +63,9 @@ const getHref = (node: Element) => node.getAttribute('href');
 const navtab = document.querySelector('#tabHeader');
 const tabcontent = document.querySelector('#tabContent');
 
+const gitTab = document.querySelector('#four');
+const summary= document.getElementById('gitSummary');
+
 sidebar.querySelectorAll('a.setting-item').forEach(node => node.addEventListener('click', e => {
     const href = getHref(node);
     const item = expandbar.querySelector('.item');
@@ -75,6 +79,33 @@ document.getElementById('newTab').addEventListener('click', e => {
     e.preventDefault();
     newTab();
 });
+
+
+gitTab.querySelectorAll('a.row').forEach(node => node.addEventListener('click', e => {
+    summary.innerHTML= "";
+    const href = getHref(node);
+    switch (href) {
+        case "#gitFetch":
+            gitFetch().then((fetchSummary)=>{
+                summary.innerHTML= fetchSummary;
+            });
+            break;
+        case "#gitCommit":
+            //todo: Implement commit
+            break;
+        case "#gitPull":
+            gitPull().then((pullSummary)=>{
+                summary.innerHTML= pullSummary;
+            });
+            break;
+        case "#gitPush":
+            //todo: Implement Push
+            break;
+        default:
+            break;
+
+    }
+}));
 
 navtab.querySelectorAll('div.tab-item').forEach(node => node.addEventListener('click', e => {
     e.preventDefault();
