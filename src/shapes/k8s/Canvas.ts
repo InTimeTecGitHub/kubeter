@@ -65,13 +65,13 @@ export class Canvas extends Node<Konva.Stage> {
             this.layer.add(resource.Group);
             this.layer.batchDraw();
         });
-        
+
         //TODO: hack to resize on first window.
         this.resize(config.height, config.width);
     }
 
     private get DragTargetName(): string {
-        return this.dragTarget.replace(`${origin}/main_window/assets/`, "");
+        return this.dragTarget.replace(`${origin}/main_window/assets/img/`, "");
     }
 
     private get Pointer() {
