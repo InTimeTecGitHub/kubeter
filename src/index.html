@@ -1,120 +1,39 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kubeter</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
     </header>
     <main>
-        <div class="main-container">
-            <aside class="settings-bar">
-                <a href="#editor" class="row icon setting-item"><i class="fa fa-cog fa-2x"></i></a>
-                <a href="#two" class="row icon setting-item highlight"><i class="fa fa-cogs fa-2x"></i></a>
-                <a href="#three" class="row icon setting-item"><i class="fa fa-address-book fa-2x"></i></a>
-                <a href="#four" class="row icon setting-item"><i class="fa fa-allergies fa-2x"></i></a>
-                <a href="#five" class="row icon setting-item"><i class="fa fa-ankh fa-2x"></i></a>
-                <a href="#six" class="row icon setting-item"><i class="fa fa-anchor fa-2x"></i></a>
-            </aside>
-            <section class="workspace">
-                <section class="settings-expand-bar">
-                    <!-- TODO: Replace placeholder 'editor' by whatever you are going to put here. -->
-                    <div id="editor" contenteditable class="item">
-                        one one one one one one one one one one one one one one one one one one one one
-                        one one one one one one one one one one one one one one one one one one one one
-                        one one one one one one one one one one one one one one one one one one one one
-                        one one one one one one one one one one one one one one one one one one one one
-                    </div>
-                    <!-- TODO: Replace placeholder 'two' by whatever you are going to put here. -->
-                    <div id="two" class="item">
-                        <nav id="drag-items" class="topnav">
-                            <!-- TODO: This will fail when build for prod. -->
-                            <a href="#"><img src="main_window/assets/pod.svg" draggable="true" /></a>
-                            <a href="#"><img src="main_window/assets/deploy.svg" draggable="true" /></a>
-                            <a href="#"><img src="main_window/assets/ns.svg" draggable="true" /></a>
-                            <a href="#"><img src="main_window/assets/rs.svg" draggable="true" /></a>
-                            <a href="#"><img src="main_window/assets/svc.svg" draggable="true" /></a>
-                            <a href="#"><img src="main_window/assets/cm.svg" draggable="true" /></a>
-                            <a href="#"><img src="main_window/assets/secret.svg" draggable="true" /></a>
-                            <a href="#"><img src="main_window/assets/ing.svg" draggable="true" /></a>
-                            <!-- <a href="#"></a><img src="main_window/assets/trash-can.png" draggable="false" style="position: absolute;right: 10px;" /> -->
-                        </nav>
-                    </div>
-                    <!-- TODO: Replace placeholder 'three' by whatever you are going to put here. -->
-                    <div id="three" class="item">
-                        three three three three three three three three three three three three three three
-                        three three three three three three three three three three three three three three
-                        three three three three three three three three three three three three three three
-                        three three three three three three three three three three three three three three
-                    </div>
-                    <!-- TODO: Replace placeholder 'four' by whatever you are going to put here. -->
-                    <div id="four" class="item">
-                        four four four four four four four four four four four four four four four four
-                        four four four four four four four four four four four four four four four four
-                        four four four four four four four four four four four four four four four four
-                        four four four four four four four four four four four four four four four four
-                    </div>
-                    <!-- TODO: Replace placeholder 'five' by whatever you are going to put here. -->
-                    <div id="five" class="item">
-                        five five five five five five five five five five five five five five five five
-                        five five five five five five five five five five five five five five five five
-                        five five five five five five five five five five five five five five five five
-                        five five five five five five five five five five five five five five five five
-                    </div>
-                    <!-- TODO: Replace placeholder 'six' by whatever you are going to put here. -->
-                    <div id="six" class="item">
-                        six six six six six six six six six six six six six six six six six six six six
-                        six six six six six six six six six six six six six six six six six six six six
-                        six six six six six six six six six six six six six six six six six six six six
-                        six six six six six six six six six six six six six six six six six six six six
-                    </div>
-                </section>
-                <section class="canvas">
-                    <div id="k8scanvas">
-                        <nav id="tabHeader">
-                            <a id="newTab" href="" class="new-tab-item"><i class="fa fa-plus"></i></a>
-                            <div href="#tab1" class="tab-item active">index.html <a href="" class="close"><i class="fa fa-times"></i></a></div>
-                            <div href="#tab2" class="tab-item">untitled <a href="" class="close"><i class="fa fa-times"></i></a></div>
-                        </nav>
-                        <div id="tabContent">
-                            <div id="tab1" class="tab active">
-                                <p>This is a new tab.</p>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                                    piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
-                                    McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of
-                                    the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
-                                    the cites of the word in classical literature, discovered the undoubtable source. Lorem
-                                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
-                                    Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
-                                    theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-                                    "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-    
-                                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                                    interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
-                                    are also reproduced in their exact original form, accompanied by English versions from
-                                    the 1914 translation by H. Rackham.</p>
-                            </div>
-                            <div id="tab2" class="tab">
-                                <p>This is another new tab.</p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled it to make a type specimen book. It has
-                                    survived not only five centuries, but also the leap into electronic typesetting,
-                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </section>
-            </section>
-        </div>
+      <div class="main-container">
+        <aside class="settings-bar">
+	  <!-- The buttons to be placed here. -->
+        </aside>
+        <section class="workspace">
+          <section class="settings-expand-bar">
+            <!-- This is where the content of different settings bar buttons will be placed. -->
+          </section>
+          <section class="canvas">
+            <div id="k8scanvas">
+              <nav id="tabHeader">
+                <a id="newTab" href="" class="new-tab-item"><i class="fa fa-plus"></i></a>
+                
+              </nav>
+              <div id="tabContent">
+                
+              </div>
+              
+            </div>
+          </section>
+        </section>
+      </div>
     </main>
-</body>
+  </body>
 
 </html>
